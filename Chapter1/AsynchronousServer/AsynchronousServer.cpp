@@ -1,5 +1,5 @@
 #include "AsynchronousServer.h"
-#include <boost/bind.hpp>:
+#include <boost/bind.hpp>
 
 using namespace boost::asio;
 using namespace std;

@@ -12,7 +12,7 @@ public:
 	void run();
 private:
 	void start_accept(socket_ptr sock);
-	void handle_accept(socket_ptr sock/*, const boost::system::error_code& err*/);
+	void handle_accept(socket_ptr sock);
 
 	std::shared_ptr<boost::asio::io_service> mService;
 	std::shared_ptr<boost::asio::ip::tcp::acceptor> mAcc;

@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C90CEB0D-05E1-4494-8B31-C86A72B1DA13}</ProjectGuid>
+    <ProjectGuid>{F4E7BA75-FE06-41DC-A680-6C2EF0963AC3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Asio</RootNamespace>
+    <RootNamespace>TCPSynchronousClient</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,24 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="asio.cpp" />
-    <ClCompile Include="Async10Threads.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="RunningForever.cpp" />
-    <ClCompile Include="StayAlive.cpp" />
-    <ClCompile Include="Sync10Threads.cpp" />
-    <ClCompile Include="SyncOneThread.cpp" />
-    <ClCompile Include="Timer1.cpp" />
-    <ClCompile Include="Timer2.cpp" />
-    <ClCompile Include="Timer3.cpp" />
-    <ClCompile Include="Timer4.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="asio.h" />
-    <ClInclude Include="Timer1.h" />
-    <ClInclude Include="Timer2.h" />
-    <ClInclude Include="Timer3.h" />
-    <ClInclude Include="Timer4.h" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
