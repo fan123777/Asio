@@ -89,6 +89,7 @@
     <ClCompile Include="Timer2.cpp" />
     <ClCompile Include="Timer3.cpp" />
     <ClCompile Include="Timer4.cpp" />
+    <ClCompile Include="Timer5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asio.h" />
@@ -96,6 +97,7 @@
     <ClInclude Include="Timer2.h" />
     <ClInclude Include="Timer3.h" />
     <ClInclude Include="Timer4.h" />
+    <ClInclude Include="Timer5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

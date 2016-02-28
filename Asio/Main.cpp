@@ -4,6 +4,7 @@
 #include "Timer2.h"
 #include "Timer3.h"
 #include "Timer4.h"
+#include "Timer5.h"
 
 int main()
 {
@@ -12,5 +13,6 @@ int main()
 	// timer_1::sync_timer();
 	// timer_2::async_timer();
 	// timer_3::async_timer();
-	timer_4::async_timer();
+	// timer_4::async_timer();
+	timer_5::async_timer();
 }

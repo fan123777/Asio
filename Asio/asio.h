@@ -680,6 +680,16 @@ namespace boost_asio
 	// Timer.4 - Using a member function as a handler
 	// The boost::bind() function works just as well with class member functions as with free functions. Since all non-static class member functions have an implicit this parameter, we need to bind this to the function.
 	// Timer.5 - Synchronising handlers in multithreaded programs
-
+	// The previous four tutorials avoided the issue of handler synchronisation by calling the io_service::run() function from one thread only.As you already know, the asio library provides a guarantee that callback handlers will only be called from threads that are currently calling io_service::run().Consequently, calling io_service::run() from only one thread ensures that callback handlers cannot run concurrently.
+	// The single threaded approach is usually the best place to start when developing applications using asio. The downside is the limitations it places on programs, particularly servers, including:
+	// - Poor responsiveness when handlers can take a long time to complete.
+	// - An inability to scale on multiprocessor systems.
+	// If you find yourself running into these limitations, an alternative approach is to have a pool of threads calling io_service::run(). However, as this allows handlers to execute concurrently, we need a method of synchronisation when handlers might be accessing a shared, thread - unsafe resource.
+	// In addition to initialising a pair of boost::asio::deadline_timer members, the constructor initialises the strand_ member, an object of type boost::asio::strand.
+	// An boost::asio::strand guarantees that, for those handlers that are dispatched through it, an executing handler will be allowed to complete before the next one is started.This is guaranteed irrespective of the number of threads that are calling io_service::run(). Of course, the handlers may still execute concurrently with other handlers that were not dispatched through an boost::asio::strand, or were dispatched through a different boost::asio::strand object.
+	// When initiating the asynchronous operations, each callback handler is "wrapped" using the boost::asio::strand object. The strand::wrap() function returns a new handler that automatically dispatches its contained handler through the boost::asio::strand object.By wrapping the handlers using the same boost::asio::strand, we are ensuring that they cannot execute concurrently.
+	// In a multithreaded program, the handlers for asynchronous operations should be synchronised if they access shared resources.In this tutorial, the shared resources used by the handlers(print1 and print2) are std::cout and the count_ data member.
+	// The main function now causes io_service::run() to be called from two threads: the main thread and one additional thread. This is accomplished using an boost::thread object.
+	// Just as it would with a call from a single thread, concurrent calls to io_service::run() will continue to execute while there is "work" left to do.The background thread will not exit until all asynchronous operations have completed.
 
 }
