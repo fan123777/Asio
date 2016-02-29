@@ -51,6 +51,27 @@
     <ClCompile Include="Timer5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Daytime1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Daytime2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Daytime3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Daytime4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Daytime5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Daytime6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asio.h">
@@ -69,6 +90,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Timer5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime6.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

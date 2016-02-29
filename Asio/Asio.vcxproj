@@ -80,6 +80,12 @@
   <ItemGroup>
     <ClCompile Include="asio.cpp" />
     <ClCompile Include="Async10Threads.cpp" />
+    <ClCompile Include="Daytime1.cpp" />
+    <ClCompile Include="Daytime2.cpp" />
+    <ClCompile Include="Daytime3.cpp" />
+    <ClCompile Include="Daytime4.cpp" />
+    <ClCompile Include="Daytime5.cpp" />
+    <ClCompile Include="Daytime6.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="RunningForever.cpp" />
     <ClCompile Include="StayAlive.cpp" />
@@ -90,14 +96,22 @@
     <ClCompile Include="Timer3.cpp" />
     <ClCompile Include="Timer4.cpp" />
     <ClCompile Include="Timer5.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asio.h" />
+    <ClInclude Include="Daytime1.h" />
+    <ClInclude Include="Daytime2.h" />
+    <ClInclude Include="Daytime3.h" />
+    <ClInclude Include="Daytime4.h" />
+    <ClInclude Include="Daytime5.h" />
+    <ClInclude Include="Daytime6.h" />
     <ClInclude Include="Timer1.h" />
     <ClInclude Include="Timer2.h" />
     <ClInclude Include="Timer3.h" />
     <ClInclude Include="Timer4.h" />
     <ClInclude Include="Timer5.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

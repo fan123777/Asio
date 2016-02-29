@@ -692,4 +692,35 @@ namespace boost_asio
 	// The main function now causes io_service::run() to be called from two threads: the main thread and one additional thread. This is accomplished using an boost::thread object.
 	// Just as it would with a call from a single thread, concurrent calls to io_service::run() will continue to execute while there is "work" left to do.The background thread will not exit until all asynchronous operations have completed.
 
+	// Daytime.1 - A synchronous TCP daytime client
+	// This tutorial program shows how to use asio to implement a client application with TCP.
+	// All programs that use asio need to have at least one io_service object.
+	// We use a boost::array to hold the received data.The boost::asio::buffer() function automatically determines the size of the array to help prevent buffer overruns.Instead of a boost::array, we could have used a char[] or std::vector.
+	// When the server closes the connection, the ip::tcp::socket::read_some() function will exit with the boost::asio::error::eof error, which is how we know to exit the loop.
+	// Daytime.2 - A synchronous TCP daytime server
+	// We define the function make_daytime_string() to create the string to be sent back to the client. This function will be reused in all of our daytime server applications.
+	// A ip::tcp::acceptor object needs to be created to listen for new connections. It is initialised to listen on TCP port 13, for IP version 4.
+	// This is an iterative server, which means that it will handle one connection at a time. Create a socket that will represent the connection to the client, and then wait for a connection.
+	// Daytime.3 - An asynchronous TCP daytime server
+	// The function start_accept() creates a socket and initiates an asynchronous accept operation to wait for a new connection.
+	// The function handle_accept() is called when the asynchronous accept operation initiated by start_accept() finishes.It services the client request, and then calls start_accept() to initiate the next accept operation.
+	// We will use shared_ptr and enable_shared_from_this because we want to keep the tcp_connection object alive as long as there is an operation that refers to it.
+	// In the function start(), we call boost::asio::async_write() to serve the data to the client. Note that we are using boost::asio::async_write(), rather than ip::tcp::socket::async_write_some(), to ensure that the entire block of data is sent.
+	// The data to be sent is stored in the class member message_ as we need to keep the data valid until the asynchronous operation is complete.
+	// When initiating the asynchronous operation, and if using boost::bind(), you must specify only the arguments that match the handler's parameter list.In this program, both of the argument placeholders(boost::asio::placeholders::error and boost::asio::placeholders:: bytes_transferred) could potentially have been removed, since they are not being used in handle_write().
+	// Daytime.4 - A synchronous UDP daytime client
+	// This tutorial program shows how to use asio to implement a client application with UDP.
+	// We use an ip::udp::resolver object to find the correct remote endpoint to use based on the host and service names.The query is restricted to return only IPv4 endpoints by the ip::udp::v4() argument.
+	// The ip::udp::resolver::resolve() function is guaranteed to return at least one endpoint in the list if it does not fail. This means it is safe to dereference the return value directly.
+	// Since UDP is datagram-oriented, we will not be using a stream socket. Create an ip::udp::socket and initiate contact with the remote endpoint.
+	// Now we need to be ready to accept whatever the server sends back to us. The endpoint on our side that receives the server's responsewill be initialised by ip::udp::socket::receive_from(). 
+	// Daytime.5 - A synchronous UDP daytime server
+	// Create an ip::udp::socket object to receive requests on UDP port 13.
+	// Wait for a client to initiate contact with us. The remote_endpoint object will be populated by ip::udp::socket::receive_from().
+	// Determine what we are going to send back to the client.
+	// Send the response to the remote_endpoint.
+	// Daytime.6 - An asynchronous UDP daytime server
+	// Create a server object to accept incoming client requests, and run the io_service object.
+	// The constructor initialises a socket to listen on UDP port 13.
+
 }
