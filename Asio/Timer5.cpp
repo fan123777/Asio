@@ -1,6 +1,7 @@
 #include "Timer5.h"
 #include <thread>
 
+// Synchronising handlers in multithreaded programs
 namespace timer_5
 {
 	void async_timer()

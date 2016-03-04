@@ -9,7 +9,6 @@ using namespace std;
 
 typedef boost::shared_ptr<ip::tcp::socket> socket_ptr;
 
-
 namespace boost_asio
 {
 	// Getting Started with Boost.Asio

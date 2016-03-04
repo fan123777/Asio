@@ -86,11 +86,13 @@
     <ClCompile Include="Daytime4.cpp" />
     <ClCompile Include="Daytime5.cpp" />
     <ClCompile Include="Daytime6.cpp" />
+    <ClCompile Include="Daytime7.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="RunningForever.cpp" />
     <ClCompile Include="StayAlive.cpp" />
     <ClCompile Include="Sync10Threads.cpp" />
     <ClCompile Include="SyncOneThread.cpp" />
+    <ClCompile Include="Testing.cpp" />
     <ClCompile Include="Timer1.cpp" />
     <ClCompile Include="Timer2.cpp" />
     <ClCompile Include="Timer3.cpp" />
@@ -106,6 +108,8 @@
     <ClInclude Include="Daytime4.h" />
     <ClInclude Include="Daytime5.h" />
     <ClInclude Include="Daytime6.h" />
+    <ClInclude Include="Daytime7.h" />
+    <ClInclude Include="Testing.h" />
     <ClInclude Include="Timer1.h" />
     <ClInclude Include="Timer2.h" />
     <ClInclude Include="Timer3.h" />

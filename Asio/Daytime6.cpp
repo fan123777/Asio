@@ -1,6 +1,7 @@
 #include "Daytime6.h"
 #include <iostream>
 
+// An asynchronous UDP daytime server
 namespace daytime_6
 {
 	void daytime()

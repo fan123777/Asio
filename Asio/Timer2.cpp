@@ -3,6 +3,7 @@
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
+// Using a timer asynchronously
 namespace timer_2
 {
 	void print(const boost::system::error_code& /*e*/)

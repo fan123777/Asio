@@ -8,6 +8,7 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/asio.hpp>
 
+// An asynchronous TCP daytime server
 namespace daytime_3
 {
 	void daytime();
@@ -43,6 +44,8 @@ namespace daytime_3
 		void handle_write(const boost::system::error_code& /*error*/,
 			size_t /*bytes_transferred*/)
 		{
+			int i = 0;
+			i++;
 		}
 		tcp::socket socket_;
 		std::string message_;
@@ -51,8 +54,8 @@ namespace daytime_3
 	class tcp_server
 	{
 	public:
-		tcp_server(boost::asio::io_service& io_service)
-			: acceptor_(io_service, tcp::endpoint(tcp::v4(), 2001))
+		tcp_server(boost::asio::io_service& io_service, int port)
+			: acceptor_(io_service, tcp::endpoint(tcp::v4(), port))
 		{
 			start_accept();
 		}

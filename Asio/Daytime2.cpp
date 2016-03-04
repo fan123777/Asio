@@ -3,6 +3,7 @@
 #include <iostream>
 #include <boost/asio.hpp>
 
+// A synchronous TCP daytime server
 namespace daytime_2
 {
 	using boost::asio::ip::tcp;

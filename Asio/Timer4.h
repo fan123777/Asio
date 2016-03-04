@@ -2,6 +2,8 @@
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
+
+// Using a member function as a handler
 namespace timer_4
 {
 	void async_timer();

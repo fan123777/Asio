@@ -72,6 +72,12 @@
     <ClCompile Include="Daytime6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Daytime7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asio.h">
@@ -111,6 +117,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Daytime6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Daytime7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Testing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

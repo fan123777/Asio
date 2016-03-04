@@ -4,6 +4,7 @@
 #include <boost/array.hpp>
 #include <boost/asio.hpp>
 
+// A synchronous TCP daytime client
 namespace daytime_1
 {
 	using namespace boost::asio;

@@ -3,6 +3,7 @@
 #include <boost/array.hpp>
 #include <boost/asio.hpp>
 
+// A synchronous UDP daytime client
 namespace daytime_4
 {
 	using boost::asio::ip::udp;

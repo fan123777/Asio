@@ -68,6 +68,10 @@ namespace boost_asio
 		// When connect_handler is called, check for the error code (ec), and if successful, you can write asynchronously to the server.
 		// Note that the service.run() loop will run as long as there are asynchronous operations pending.In the preceding example, there's only one such operation, that is, the socket async_connect.After that, service.run() exits.
 
+		// write 4 kinds of clients/servers...
+
+
+
 		// Exceptions versus error codes
 		// All the synchronous functions have overloads that either throw in case of error or can return an error code.
 		/*try {
@@ -390,8 +394,6 @@ namespace boost_asio
 
 		// TCP synchronous server
 	}
-
-
 	// Christopher Kohlhoff
 
 	class http_connection
@@ -722,5 +724,12 @@ namespace boost_asio
 	// Daytime.6 - An asynchronous UDP daytime server
 	// Create a server object to accept incoming client requests, and run the io_service object.
 	// The constructor initialises a socket to listen on UDP port 13.
+	// Daytime.7 - A combined TCP/UDP asynchronous server
+	// This tutorial program shows how to combine the two asynchronous servers that we have just written, into a single server application.
 
+	// Examples
+
+// !!!
+// - finish book from Torjo
+// - investigate examples by Kohlhoff
 }

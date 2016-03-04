@@ -6,6 +6,7 @@
 #include <boost/asio.hpp>
 #include "utils.h"
 
+// An asynchronous UDP daytime server
 namespace daytime_6
 {
 	using boost::asio::ip::udp;

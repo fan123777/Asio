@@ -5,6 +5,7 @@
 #include <boost/bind.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
+// Synchronising handlers in multithreaded programs
 namespace timer_5
 {
 	void async_timer();
