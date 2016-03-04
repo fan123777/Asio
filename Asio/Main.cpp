@@ -12,6 +12,8 @@
 #include "Testing.h"
 #include <thread>
 #include <chrono>
+#include "chat_client.h"
+#include "chat_server.h"
 
 using namespace std;
 using namespace chrono;
@@ -96,4 +98,15 @@ void main()
 	// - async client
 	// - networking dispatcher
 	// - check examples 
+	if (true)
+	{
+		thread t1(server_main);
+		this_thread::sleep_for(seconds(1));
+		thread t2(client_main);
+		//thread t3(client_main);
+		//t3.join();
+		t2.join();
+		t1.join();
+	}
+	// !!! learn chat
 }

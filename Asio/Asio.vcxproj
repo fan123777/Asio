@@ -80,6 +80,8 @@
   <ItemGroup>
     <ClCompile Include="asio.cpp" />
     <ClCompile Include="Async10Threads.cpp" />
+    <ClCompile Include="chat_client.cpp" />
+    <ClCompile Include="chat_server.cpp" />
     <ClCompile Include="Daytime1.cpp" />
     <ClCompile Include="Daytime2.cpp" />
     <ClCompile Include="Daytime3.cpp" />
@@ -102,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asio.h" />
+    <ClInclude Include="chat_client.h" />
+    <ClInclude Include="chat_message.hpp" />
+    <ClInclude Include="chat_server.h" />
     <ClInclude Include="Daytime1.h" />
     <ClInclude Include="Daytime2.h" />
     <ClInclude Include="Daytime3.h" />
