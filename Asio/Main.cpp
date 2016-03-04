@@ -90,6 +90,10 @@ void main()
 		// connection.async_connect("127.0.0.1", 2001, connect_handler);
 	}
 
-	// - wait some time for action to complete
+	// - boost bind
+	// - wait some time for action to complete. check for delay
+	// - timer
+	// - async client
 	// - networking dispatcher
+	// - check examples 
 }
