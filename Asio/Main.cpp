@@ -108,5 +108,10 @@ void main()
 		t2.join();
 		t1.join();
 	}
-	// !!! learn chat
+	// !!!
+	// !!! learn chat +-
+	// write own async client <-> server application
+	// learn examples
+	// read book by Christopher Kohlhoff 1 more time!!!
+	// go deeper into details and examples, try your own programs!!!
 }

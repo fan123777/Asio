@@ -338,8 +338,10 @@ namespace boost_asio
 		// - write_at(stream, offset, buffer [, completion]): This function writes at offset, on the given stream.The parameters' meaning is the same as async_read_at.
 		// it is for random access streams, like files, not for sockets.
 
+
 		// Asynchronous programming
 		// The need for going asynchronous
+
 
 		// Asynchronous run(), run_one(), poll(), poll_one()
 		// To implement the listening loop, io_service class provides four functions, such as run(), run_one(), poll(), and poll_one().While most of the time you'll be happy with service.run().You'll learn here what the other functions accomplish.
@@ -380,6 +382,7 @@ namespace boost_asio
 
 		// Staying alive
 		// When using socket buffers, you can have a buffer instance outlive an asynchronous call(make use of boost::shared_array<>).We can use the same principle here by creating a class that internally holds the socket and its read / write buffers.Then, for all asynchronous calls, I will pass a boost::bind functor with a shared pointer :
+		// p 54  - example of async client.
 	}
 
 	// 3 Echo Server/Clients

@@ -61,6 +61,5 @@ namespace testing
 	//	bool m_EnableLogging;
 	//	std::string m_message;
 	//};
-
 }
 
